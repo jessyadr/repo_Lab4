@@ -1,0 +1,240 @@
+\doxysection{Référence de l\textquotesingle{}espace de nommage swagger\+\_\+server.\+session\+\_\+controller}
+\hypertarget{namespaceswagger__server_1_1session__controller}{}\label{namespaceswagger__server_1_1session__controller}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+Dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a4c9076ec3c7a36d61dc7a915dea08e95}{load\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Fonctions principales. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a5c29f6c4afbd31eaa37982967a773bba}{save\+\_\+data}} (Dict data)
+\begin{DoxyCompactList}\small\item\em Sauvegarder les données dans le fichier JSON. \end{DoxyCompactList}\item 
+Union\mbox{[}Dict, None\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a3124560f688b918133da8d3699f34526}{find\+\_\+course\+\_\+by\+\_\+id}} (Dict data, int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Trouver un cours par son ID. \end{DoxyCompactList}\item 
+Union\mbox{[}Dict, None\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_aca5e0fc1be9572624577049547c6d05e}{find\+\_\+session\+\_\+by\+\_\+id}} (Dict course, int session\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Trouver une séance par son ID dans un cours donné. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a044d142db0814685474cb1eabb7e198a}{courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+get}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Obtenir les séances d\textquotesingle{}un cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a009aa0f76ed3840f833c02d84ae46828}{courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+post}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Créer une nouvelle séance pour un cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_aa514dffae4768dcef1ad555c9c16cf21}{courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+session\+\_\+id\+\_\+put}} (int course\+\_\+id, int session\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Mettre à jour une séance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_ac2a74919984f6837a597237f47268647}{DATA\+\_\+\+FILE}} = "{}data.\+json"{}
+\begin{DoxyCompactList}\small\item\em Constantes globales. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_ab65defeb32462c590dd29f0b36bc4040}{COURSE\+\_\+\+NOT\+\_\+\+FOUND}} = \{"{}message"{}\+: "{}Cours non trouvé."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si le cours n\textquotesingle{}existe pas. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_ade29c558a0c451e52ed91d7dfc633188}{SESSION\+\_\+\+NOT\+\_\+\+FOUND}} = \{"{}message"{}\+: "{}Séance non trouvée."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si la séance n\textquotesingle{}existe pas. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a96379c8bc846f8d1d9f9367f937c48f8}{SESSION\+\_\+\+ALREADY\+\_\+\+EXISTS}} = \{"{}message"{}\+: "{}Une séance avec cet ID existe déjà dans le cours."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si une séance avec cet ID existe déjà. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a22378282cca319fd180827626908a15b}{SESSION\+\_\+\+CREATED\+\_\+\+SUCCESS}} = "{}Séance créée avec succès."{}
+\begin{DoxyCompactList}\small\item\em Message de succès renvoyé lors de la création d\textquotesingle{}une séance. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_afc53972e4d44d0782d389bfef8b809fb}{SESSION\+\_\+\+UPDATED\+\_\+\+SUCCESS}} = "{}Séance mise à jour avec succès."{}
+\begin{DoxyCompactList}\small\item\em Message de succès renvoyé lors de la mise à jour d\textquotesingle{}une séance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{namespaceswagger__server_1_1session__controller_a044d142db0814685474cb1eabb7e198a}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!courses\_course\_id\_sessions\_get@{courses\_course\_id\_sessions\_get}}
+\index{courses\_course\_id\_sessions\_get@{courses\_course\_id\_sessions\_get}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_course\_id\_sessions\_get()}{courses\_course\_id\_sessions\_get()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_a044d142db0814685474cb1eabb7e198a} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+session\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+get (\begin{DoxyParamCaption}\item[{int}]{course\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Obtenir les séances d\textquotesingle{}un cours. 
+
+Retourne toutes les séances associées aux modules d\textquotesingle{}un cours spécifique.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em course\+\_\+id} & int L\textquotesingle{}ID du cours. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Liste des séances et un code de statut HTTP. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1session__controller_a009aa0f76ed3840f833c02d84ae46828}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!courses\_course\_id\_sessions\_post@{courses\_course\_id\_sessions\_post}}
+\index{courses\_course\_id\_sessions\_post@{courses\_course\_id\_sessions\_post}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_course\_id\_sessions\_post()}{courses\_course\_id\_sessions\_post()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_a009aa0f76ed3840f833c02d84ae46828} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+session\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+post (\begin{DoxyParamCaption}\item[{int}]{course\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Créer une nouvelle séance pour un cours. 
+
+Ajoute une nouvelle séance à un cours existant. Si une séance avec le même ID existe déjà, retourne une erreur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em course\+\_\+id} & int L\textquotesingle{}ID du cours. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Message de succès ou d\textquotesingle{}erreur et un code de statut HTTP. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1session__controller_aa514dffae4768dcef1ad555c9c16cf21}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!courses\_course\_id\_sessions\_session\_id\_put@{courses\_course\_id\_sessions\_session\_id\_put}}
+\index{courses\_course\_id\_sessions\_session\_id\_put@{courses\_course\_id\_sessions\_session\_id\_put}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_course\_id\_sessions\_session\_id\_put()}{courses\_course\_id\_sessions\_session\_id\_put()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_aa514dffae4768dcef1ad555c9c16cf21} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+session\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+session\+\_\+id\+\_\+put (\begin{DoxyParamCaption}\item[{int}]{course\+\_\+id}{, }\item[{int}]{session\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Mettre à jour une séance. 
+
+Modifie les données d\textquotesingle{}une séance existante. Si la séance ou le cours n\textquotesingle{}existe pas, retourne une erreur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em course\+\_\+id} & int L\textquotesingle{}ID du cours. \\
+\hline
+{\em session\+\_\+id} & int L\textquotesingle{}ID de la séance à mettre à jour. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Message de succès ou d\textquotesingle{}erreur et un code de statut HTTP. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1session__controller_a3124560f688b918133da8d3699f34526}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!find\_course\_by\_id@{find\_course\_by\_id}}
+\index{find\_course\_by\_id@{find\_course\_by\_id}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{find\_course\_by\_id()}{find\_course\_by\_id()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_a3124560f688b918133da8d3699f34526} 
+ Union\mbox{[}Dict, None\mbox{]} swagger\+\_\+server.\+session\+\_\+controller.\+find\+\_\+course\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{Dict}]{data}{, }\item[{int}]{course\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Trouver un cours par son ID. 
+
+Recherche un cours dans les données en fonction de son ID.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & dict Les données contenant la liste des cours. \\
+\hline
+{\em course\+\_\+id} & int L\textquotesingle{}ID du cours à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+dict\texorpdfstring{$\vert$}{|}\+None Le cours correspondant à l\textquotesingle{}ID ou None. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1session__controller_aca5e0fc1be9572624577049547c6d05e}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!find\_session\_by\_id@{find\_session\_by\_id}}
+\index{find\_session\_by\_id@{find\_session\_by\_id}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{find\_session\_by\_id()}{find\_session\_by\_id()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_aca5e0fc1be9572624577049547c6d05e} 
+ Union\mbox{[}Dict, None\mbox{]} swagger\+\_\+server.\+session\+\_\+controller.\+find\+\_\+session\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{Dict}]{course}{, }\item[{int}]{session\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Trouver une séance par son ID dans un cours donné. 
+
+Recherche une séance spécifique dans les modules d\textquotesingle{}un cours.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em course} & dict Le cours contenant les modules et séances. \\
+\hline
+{\em session\+\_\+id} & int L\textquotesingle{}ID de la séance à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+dict\texorpdfstring{$\vert$}{|}\+None La séance correspondante ou None. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1session__controller_a4c9076ec3c7a36d61dc7a915dea08e95}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_a4c9076ec3c7a36d61dc7a915dea08e95} 
+ Dict swagger\+\_\+server.\+session\+\_\+controller.\+load\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Fonctions principales. 
+
+Charger les données depuis le fichier JSON.
+
+Si le fichier JSON est absent ou corrompu, retourne une structure de données par défaut.
+
+\begin{DoxyReturn}{Renvoie}
+dict Les données chargées ou un dictionnaire par défaut. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1session__controller_a5c29f6c4afbd31eaa37982967a773bba}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!save\_data@{save\_data}}
+\index{save\_data@{save\_data}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{save\_data()}{save\_data()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_a5c29f6c4afbd31eaa37982967a773bba} 
+ None swagger\+\_\+server.\+session\+\_\+controller.\+save\+\_\+data (\begin{DoxyParamCaption}\item[{Dict}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Sauvegarder les données dans le fichier JSON. 
+
+Écrit les données JSON dans le fichier {\ttfamily data.\+json}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & dict Les données à sauvegarder. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des variables}
+\Hypertarget{namespaceswagger__server_1_1session__controller_ab65defeb32462c590dd29f0b36bc4040}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!COURSE\_NOT\_FOUND@{COURSE\_NOT\_FOUND}}
+\index{COURSE\_NOT\_FOUND@{COURSE\_NOT\_FOUND}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{COURSE\_NOT\_FOUND}{COURSE\_NOT\_FOUND}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_ab65defeb32462c590dd29f0b36bc4040} 
+dict swagger\+\_\+server.\+session\+\_\+controller.\+COURSE\+\_\+\+NOT\+\_\+\+FOUND = \{"{}message"{}\+: "{}Cours non trouvé."{}\}}
+
+
+
+Message renvoyé si le cours n\textquotesingle{}existe pas. 
+
+\Hypertarget{namespaceswagger__server_1_1session__controller_ac2a74919984f6837a597237f47268647}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!DATA\_FILE@{DATA\_FILE}}
+\index{DATA\_FILE@{DATA\_FILE}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{DATA\_FILE}{DATA\_FILE}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_ac2a74919984f6837a597237f47268647} 
+str swagger\+\_\+server.\+session\+\_\+controller.\+DATA\+\_\+\+FILE = "{}data.\+json"{}}
+
+
+
+Constantes globales. 
+
+Chemin vers le fichier JSON contenant les données des cours et séances. \Hypertarget{namespaceswagger__server_1_1session__controller_a96379c8bc846f8d1d9f9367f937c48f8}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!SESSION\_ALREADY\_EXISTS@{SESSION\_ALREADY\_EXISTS}}
+\index{SESSION\_ALREADY\_EXISTS@{SESSION\_ALREADY\_EXISTS}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{SESSION\_ALREADY\_EXISTS}{SESSION\_ALREADY\_EXISTS}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_a96379c8bc846f8d1d9f9367f937c48f8} 
+dict swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+ALREADY\+\_\+\+EXISTS = \{"{}message"{}\+: "{}Une séance avec cet ID existe déjà dans le cours."{}\}}
+
+
+
+Message renvoyé si une séance avec cet ID existe déjà. 
+
+\Hypertarget{namespaceswagger__server_1_1session__controller_a22378282cca319fd180827626908a15b}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!SESSION\_CREATED\_SUCCESS@{SESSION\_CREATED\_SUCCESS}}
+\index{SESSION\_CREATED\_SUCCESS@{SESSION\_CREATED\_SUCCESS}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{SESSION\_CREATED\_SUCCESS}{SESSION\_CREATED\_SUCCESS}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_a22378282cca319fd180827626908a15b} 
+str swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+CREATED\+\_\+\+SUCCESS = "{}Séance créée avec succès."{}}
+
+
+
+Message de succès renvoyé lors de la création d\textquotesingle{}une séance. 
+
+\Hypertarget{namespaceswagger__server_1_1session__controller_ade29c558a0c451e52ed91d7dfc633188}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!SESSION\_NOT\_FOUND@{SESSION\_NOT\_FOUND}}
+\index{SESSION\_NOT\_FOUND@{SESSION\_NOT\_FOUND}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{SESSION\_NOT\_FOUND}{SESSION\_NOT\_FOUND}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_ade29c558a0c451e52ed91d7dfc633188} 
+dict swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+NOT\+\_\+\+FOUND = \{"{}message"{}\+: "{}Séance non trouvée."{}\}}
+
+
+
+Message renvoyé si la séance n\textquotesingle{}existe pas. 
+
+\Hypertarget{namespaceswagger__server_1_1session__controller_afc53972e4d44d0782d389bfef8b809fb}\index{swagger\_server.session\_controller@{swagger\_server.session\_controller}!SESSION\_UPDATED\_SUCCESS@{SESSION\_UPDATED\_SUCCESS}}
+\index{SESSION\_UPDATED\_SUCCESS@{SESSION\_UPDATED\_SUCCESS}!swagger\_server.session\_controller@{swagger\_server.session\_controller}}
+\doxysubsubsection{\texorpdfstring{SESSION\_UPDATED\_SUCCESS}{SESSION\_UPDATED\_SUCCESS}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1session__controller_afc53972e4d44d0782d389bfef8b809fb} 
+str swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+UPDATED\+\_\+\+SUCCESS = "{}Séance mise à jour avec succès."{}}
+
+
+
+Message de succès renvoyé lors de la mise à jour d\textquotesingle{}une séance. 
+

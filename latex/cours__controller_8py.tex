@@ -1,0 +1,62 @@
+\doxysection{Référence du fichier cours\+\_\+controller.\+py}
+\hypertarget{cours__controller_8py}{}\label{cours__controller_8py}\index{cours\_controller.py@{cours\_controller.py}}
+
+
+Gestion des endpoints REST pour les cours.  
+
+
+\doxysubsubsection*{Espaces de nommage}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceswagger__server}{swagger\+\_\+server}}
+\item 
+namespace \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller}{swagger\+\_\+server.\+cours\+\_\+controller}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+Dict \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a603c488dd5dfcda41aed5620b7ad8d86}{swagger\+\_\+server.\+cours\+\_\+controller.\+load\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Fonctions principales. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a3118f5cdb0b3ecc602e531a296ae5309}{swagger\+\_\+server.\+cours\+\_\+controller.\+save\+\_\+data}} (Dict data)
+\begin{DoxyCompactList}\small\item\em Sauvegarder les données dans le fichier JSON. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_af4454b86123682167e928bdd9f710ce0}{swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+get}} ()
+\begin{DoxyCompactList}\small\item\em Obtenir la liste des cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a075d2aed187f7f6d10611d36e8519aca}{swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+post}} ()
+\begin{DoxyCompactList}\small\item\em Créer un nouveau cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a13f93c6d9c1ba03e83f13b8ad2d5642c}{swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+get}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Obtenir les détails d\textquotesingle{}un cours spécifique. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a2a63795341062cf288fe736f1d21d97b}{swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+put}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Mettre à jour un cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a9cf32ba8d3bafb4393f8dee842c70736}{swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+delete}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Supprimer un cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a3c90ff0fea95724adff5c5d5cc23ba42}{swagger\+\_\+server.\+cours\+\_\+controller.\+DATA\+\_\+\+FILE}} = "{}data.\+json"{}
+\begin{DoxyCompactList}\small\item\em Constantes globales. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a6255c022e6e72b9ed035e61ce791de6a}{swagger\+\_\+server.\+cours\+\_\+controller.\+COURSE\+\_\+\+NOT\+\_\+\+FOUND}} = \{"{}message"{}\+: "{}Cours non trouvé."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si le cours n\textquotesingle{}existe pas. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a52c325aa4a36580fe7a4a7ccc074221c}{swagger\+\_\+server.\+cours\+\_\+controller.\+COURSE\+\_\+\+ALREADY\+\_\+\+EXISTS}} = \{"{}message"{}\+: "{}Un cours avec cet ID existe déjà."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si un cours avec le même ID existe déjà. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gestion des endpoints REST pour les cours. 
+
+Ce fichier contient les fonctions nécessaires pour manipuler les données des cours via l\textquotesingle{}API.\hypertarget{cours__controller_8py_dependances_cours_controller}{}\doxysubsection{\texorpdfstring{Dépendances/\+Modules}{Dépendances/\+Modules}}\label{cours__controller_8py_dependances_cours_controller}
+
+\begin{DoxyItemize}
+\item connexion \+: Framework pour gérer les APIs REST.
+\item json \+: Module standard pour manipuler les fichiers JSON.
+\item os \+: Utilisé pour vérifier l\textquotesingle{}existence du fichier de données.
+\end{DoxyItemize}\hypertarget{cours__controller_8py_auteur_cours_controller}{}\doxysubsection{\texorpdfstring{Auteur(s)}{Auteur(s)}}\label{cours__controller_8py_auteur_cours_controller}
+
+\begin{DoxyItemize}
+\item Jessy / Yasmine
+\item Date \+: 20 / 11 / 2024
+\end{DoxyItemize}\hypertarget{cours__controller_8py_todo_cours_controller}{}\doxysubsection{\texorpdfstring{TODO}{TODO}}\label{cours__controller_8py_todo_cours_controller}
+
+\begin{DoxyItemize}
+\item Ajouter une validation des données d\textquotesingle{}entrée.
+\item Implémenter des tests unitaires pour chaque endpoint. 
+\end{DoxyItemize}

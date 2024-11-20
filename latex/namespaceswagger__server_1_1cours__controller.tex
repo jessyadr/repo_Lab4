@@ -1,0 +1,189 @@
+\doxysection{Référence de l\textquotesingle{}espace de nommage swagger\+\_\+server.\+cours\+\_\+controller}
+\hypertarget{namespaceswagger__server_1_1cours__controller}{}\label{namespaceswagger__server_1_1cours__controller}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+Dict \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a603c488dd5dfcda41aed5620b7ad8d86}{load\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Fonctions principales. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a3118f5cdb0b3ecc602e531a296ae5309}{save\+\_\+data}} (Dict data)
+\begin{DoxyCompactList}\small\item\em Sauvegarder les données dans le fichier JSON. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_af4454b86123682167e928bdd9f710ce0}{courses\+\_\+get}} ()
+\begin{DoxyCompactList}\small\item\em Obtenir la liste des cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a075d2aed187f7f6d10611d36e8519aca}{courses\+\_\+post}} ()
+\begin{DoxyCompactList}\small\item\em Créer un nouveau cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a13f93c6d9c1ba03e83f13b8ad2d5642c}{courses\+\_\+course\+\_\+id\+\_\+get}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Obtenir les détails d\textquotesingle{}un cours spécifique. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a2a63795341062cf288fe736f1d21d97b}{courses\+\_\+course\+\_\+id\+\_\+put}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Mettre à jour un cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a9cf32ba8d3bafb4393f8dee842c70736}{courses\+\_\+course\+\_\+id\+\_\+delete}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Supprimer un cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a3c90ff0fea95724adff5c5d5cc23ba42}{DATA\+\_\+\+FILE}} = "{}data.\+json"{}
+\begin{DoxyCompactList}\small\item\em Constantes globales. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a6255c022e6e72b9ed035e61ce791de6a}{COURSE\+\_\+\+NOT\+\_\+\+FOUND}} = \{"{}message"{}\+: "{}Cours non trouvé."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si le cours n\textquotesingle{}existe pas. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1cours__controller_a52c325aa4a36580fe7a4a7ccc074221c}{COURSE\+\_\+\+ALREADY\+\_\+\+EXISTS}} = \{"{}message"{}\+: "{}Un cours avec cet ID existe déjà."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si un cours avec le même ID existe déjà. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a9cf32ba8d3bafb4393f8dee842c70736}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!courses\_course\_id\_delete@{courses\_course\_id\_delete}}
+\index{courses\_course\_id\_delete@{courses\_course\_id\_delete}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_course\_id\_delete()}{courses\_course\_id\_delete()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a9cf32ba8d3bafb4393f8dee842c70736} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+delete (\begin{DoxyParamCaption}\item[{int}]{course\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Supprimer un cours. 
+
+Supprime un cours par son ID si celui-\/ci existe.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em course\+\_\+id} & int L\textquotesingle{}ID du cours à supprimer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Message de succès ou d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a13f93c6d9c1ba03e83f13b8ad2d5642c}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!courses\_course\_id\_get@{courses\_course\_id\_get}}
+\index{courses\_course\_id\_get@{courses\_course\_id\_get}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_course\_id\_get()}{courses\_course\_id\_get()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a13f93c6d9c1ba03e83f13b8ad2d5642c} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+get (\begin{DoxyParamCaption}\item[{int}]{course\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Obtenir les détails d\textquotesingle{}un cours spécifique. 
+
+Recherche un cours par son ID et retourne ses détails s\textquotesingle{}il existe.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em course\+\_\+id} & int L\textquotesingle{}ID du cours recherché. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Détails du cours ou message d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a2a63795341062cf288fe736f1d21d97b}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!courses\_course\_id\_put@{courses\_course\_id\_put}}
+\index{courses\_course\_id\_put@{courses\_course\_id\_put}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_course\_id\_put()}{courses\_course\_id\_put()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a2a63795341062cf288fe736f1d21d97b} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+put (\begin{DoxyParamCaption}\item[{int}]{course\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Mettre à jour un cours. 
+
+Modifie les données d\textquotesingle{}un cours existant par son ID.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em course\+\_\+id} & int L\textquotesingle{}ID du cours à mettre à jour. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Message de succès ou d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_af4454b86123682167e928bdd9f710ce0}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!courses\_get@{courses\_get}}
+\index{courses\_get@{courses\_get}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_get()}{courses\_get()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_af4454b86123682167e928bdd9f710ce0} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtenir la liste des cours. 
+
+Retourne tous les cours stockés dans le fichier JSON.
+
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Liste des cours et code HTTP 200. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a075d2aed187f7f6d10611d36e8519aca}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!courses\_post@{courses\_post}}
+\index{courses\_post@{courses\_post}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{courses\_post()}{courses\_post()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a075d2aed187f7f6d10611d36e8519aca} 
+ Tuple\mbox{[}Dict, int\mbox{]} swagger\+\_\+server.\+cours\+\_\+controller.\+courses\+\_\+post (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Créer un nouveau cours. 
+
+Ajoute un cours à la base de données si l\textquotesingle{}ID est unique.
+
+\begin{DoxyReturn}{Renvoie}
+tuple(dict, int) Message de succès ou d\textquotesingle{}erreur, et code HTTP. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a603c488dd5dfcda41aed5620b7ad8d86}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a603c488dd5dfcda41aed5620b7ad8d86} 
+ Dict swagger\+\_\+server.\+cours\+\_\+controller.\+load\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Fonctions principales. 
+
+Charger les données depuis le fichier JSON.
+
+Si le fichier JSON est absent ou corrompu, retourne une structure de données par défaut.
+
+\begin{DoxyReturn}{Renvoie}
+dict Les données chargées ou un dictionnaire par défaut. 
+\end{DoxyReturn}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a3118f5cdb0b3ecc602e531a296ae5309}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!save\_data@{save\_data}}
+\index{save\_data@{save\_data}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{save\_data()}{save\_data()}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a3118f5cdb0b3ecc602e531a296ae5309} 
+ None swagger\+\_\+server.\+cours\+\_\+controller.\+save\+\_\+data (\begin{DoxyParamCaption}\item[{Dict}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Sauvegarder les données dans le fichier JSON. 
+
+Écrit les données JSON dans le fichier {\ttfamily data.\+json}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & dict Les données à sauvegarder. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des variables}
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a52c325aa4a36580fe7a4a7ccc074221c}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!COURSE\_ALREADY\_EXISTS@{COURSE\_ALREADY\_EXISTS}}
+\index{COURSE\_ALREADY\_EXISTS@{COURSE\_ALREADY\_EXISTS}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{COURSE\_ALREADY\_EXISTS}{COURSE\_ALREADY\_EXISTS}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a52c325aa4a36580fe7a4a7ccc074221c} 
+dict swagger\+\_\+server.\+cours\+\_\+controller.\+COURSE\+\_\+\+ALREADY\+\_\+\+EXISTS = \{"{}message"{}\+: "{}Un cours avec cet ID existe déjà."{}\}}
+
+
+
+Message renvoyé si un cours avec le même ID existe déjà. 
+
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a6255c022e6e72b9ed035e61ce791de6a}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!COURSE\_NOT\_FOUND@{COURSE\_NOT\_FOUND}}
+\index{COURSE\_NOT\_FOUND@{COURSE\_NOT\_FOUND}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{COURSE\_NOT\_FOUND}{COURSE\_NOT\_FOUND}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a6255c022e6e72b9ed035e61ce791de6a} 
+dict swagger\+\_\+server.\+cours\+\_\+controller.\+COURSE\+\_\+\+NOT\+\_\+\+FOUND = \{"{}message"{}\+: "{}Cours non trouvé."{}\}}
+
+
+
+Message renvoyé si le cours n\textquotesingle{}existe pas. 
+
+\Hypertarget{namespaceswagger__server_1_1cours__controller_a3c90ff0fea95724adff5c5d5cc23ba42}\index{swagger\_server.cours\_controller@{swagger\_server.cours\_controller}!DATA\_FILE@{DATA\_FILE}}
+\index{DATA\_FILE@{DATA\_FILE}!swagger\_server.cours\_controller@{swagger\_server.cours\_controller}}
+\doxysubsubsection{\texorpdfstring{DATA\_FILE}{DATA\_FILE}}
+{\footnotesize\ttfamily \label{namespaceswagger__server_1_1cours__controller_a3c90ff0fea95724adff5c5d5cc23ba42} 
+str swagger\+\_\+server.\+cours\+\_\+controller.\+DATA\+\_\+\+FILE = "{}data.\+json"{}}
+
+
+
+Constantes globales. 
+
+Chemin vers le fichier JSON contenant les données des cours. 

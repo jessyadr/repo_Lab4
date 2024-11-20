@@ -1,0 +1,69 @@
+\doxysection{Référence du fichier session\+\_\+controller.\+py}
+\hypertarget{session__controller_8py}{}\label{session__controller_8py}\index{session\_controller.py@{session\_controller.py}}
+
+
+Gestion des endpoints REST pour les séances.  
+
+
+\doxysubsubsection*{Espaces de nommage}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceswagger__server}{swagger\+\_\+server}}
+\item 
+namespace \mbox{\hyperlink{namespaceswagger__server_1_1session__controller}{swagger\+\_\+server.\+session\+\_\+controller}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+Dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a4c9076ec3c7a36d61dc7a915dea08e95}{swagger\+\_\+server.\+session\+\_\+controller.\+load\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Fonctions principales. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a5c29f6c4afbd31eaa37982967a773bba}{swagger\+\_\+server.\+session\+\_\+controller.\+save\+\_\+data}} (Dict data)
+\begin{DoxyCompactList}\small\item\em Sauvegarder les données dans le fichier JSON. \end{DoxyCompactList}\item 
+Union\mbox{[}Dict, None\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a3124560f688b918133da8d3699f34526}{swagger\+\_\+server.\+session\+\_\+controller.\+find\+\_\+course\+\_\+by\+\_\+id}} (Dict data, int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Trouver un cours par son ID. \end{DoxyCompactList}\item 
+Union\mbox{[}Dict, None\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_aca5e0fc1be9572624577049547c6d05e}{swagger\+\_\+server.\+session\+\_\+controller.\+find\+\_\+session\+\_\+by\+\_\+id}} (Dict course, int session\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Trouver une séance par son ID dans un cours donné. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a044d142db0814685474cb1eabb7e198a}{swagger\+\_\+server.\+session\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+get}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Obtenir les séances d\textquotesingle{}un cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a009aa0f76ed3840f833c02d84ae46828}{swagger\+\_\+server.\+session\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+post}} (int course\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Créer une nouvelle séance pour un cours. \end{DoxyCompactList}\item 
+Tuple\mbox{[}Dict, int\mbox{]} \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_aa514dffae4768dcef1ad555c9c16cf21}{swagger\+\_\+server.\+session\+\_\+controller.\+courses\+\_\+course\+\_\+id\+\_\+sessions\+\_\+session\+\_\+id\+\_\+put}} (int course\+\_\+id, int session\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Mettre à jour une séance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_ac2a74919984f6837a597237f47268647}{swagger\+\_\+server.\+session\+\_\+controller.\+DATA\+\_\+\+FILE}} = "{}data.\+json"{}
+\begin{DoxyCompactList}\small\item\em Constantes globales. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_ab65defeb32462c590dd29f0b36bc4040}{swagger\+\_\+server.\+session\+\_\+controller.\+COURSE\+\_\+\+NOT\+\_\+\+FOUND}} = \{"{}message"{}\+: "{}Cours non trouvé."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si le cours n\textquotesingle{}existe pas. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_ade29c558a0c451e52ed91d7dfc633188}{swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+NOT\+\_\+\+FOUND}} = \{"{}message"{}\+: "{}Séance non trouvée."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si la séance n\textquotesingle{}existe pas. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a96379c8bc846f8d1d9f9367f937c48f8}{swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+ALREADY\+\_\+\+EXISTS}} = \{"{}message"{}\+: "{}Une séance avec cet ID existe déjà dans le cours."{}\}
+\begin{DoxyCompactList}\small\item\em Message renvoyé si une séance avec cet ID existe déjà. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_a22378282cca319fd180827626908a15b}{swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+CREATED\+\_\+\+SUCCESS}} = "{}Séance créée avec succès."{}
+\begin{DoxyCompactList}\small\item\em Message de succès renvoyé lors de la création d\textquotesingle{}une séance. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespaceswagger__server_1_1session__controller_afc53972e4d44d0782d389bfef8b809fb}{swagger\+\_\+server.\+session\+\_\+controller.\+SESSION\+\_\+\+UPDATED\+\_\+\+SUCCESS}} = "{}Séance mise à jour avec succès."{}
+\begin{DoxyCompactList}\small\item\em Message de succès renvoyé lors de la mise à jour d\textquotesingle{}une séance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gestion des endpoints REST pour les séances. 
+
+Ce fichier contient les fonctions nécessaires pour manipuler les séances associées aux modules d\textquotesingle{}un cours via l\textquotesingle{}API.\hypertarget{session__controller_8py_dependances_session_controller}{}\doxysubsection{\texorpdfstring{Dépendances/\+Modules}{Dépendances/\+Modules}}\label{session__controller_8py_dependances_session_controller}
+
+\begin{DoxyItemize}
+\item connexion \+: Framework pour gérer les APIs REST.
+\item json \+: Module standard pour manipuler les fichiers JSON.
+\item os \+: Utilisé pour vérifier l\textquotesingle{}existence du fichier de données.
+\end{DoxyItemize}\hypertarget{session__controller_8py_auteur_session_controller}{}\doxysubsection{\texorpdfstring{Auteur(s)}{Auteur(s)}}\label{session__controller_8py_auteur_session_controller}
+
+\begin{DoxyItemize}
+\item Jessy / Yasmine
+\item Date \+: 20 / 11 / 2024
+\end{DoxyItemize}\hypertarget{session__controller_8py_todo_session_controller}{}\doxysubsection{\texorpdfstring{TODO}{TODO}}\label{session__controller_8py_todo_session_controller}
+
+\begin{DoxyItemize}
+\item Ajouter des validations plus strictes pour les données d\textquotesingle{}entrée.
+\item Implémenter un endpoint pour supprimer une séance.
+\item Ajouter des tests unitaires. 
+\end{DoxyItemize}
