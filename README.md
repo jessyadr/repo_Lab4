@@ -1,3 +1,7 @@
+Étudiantes:
+- Jessy Andrianandraina
+- Yasmine Kagone
+
 Documentation de l'API de Gestion de Contenu de Cours
 
 Introduction à Doxygen
